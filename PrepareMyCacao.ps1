@@ -29,28 +29,16 @@ executeScript "CommonDevTools.ps1";
 executeScript "Browsers.ps1";
 executeScript "WindowsTools.ps1";
 
-executeScript "HyperV.ps1";
 RefreshEnv
-executeScript "WSL.ps1";
+executeScript "WSL.ps1"; # TODO WSL2
 RefreshEnv
 executeScript "Docker.ps1";
-executeScript "AzureDevops.ps1";
 
-#--- Visual Studio ---
-choco install visualstudio2019professional -y --package-parameters "--add Microsoft.VisualStudio.Component.Git" 
-Update-SessionEnvironment #refreshing env due to Git install
+#--- create dev folder ---
+executeScript "SetupDevFolder.ps1";
 
-choco install -y visualstudio2019-workload-manageddesktop
-choco install -y visualstudio2019-workload-netcoretools
-choco install -y visualstudio2019-workload-azure 
-choco install -y visualstudio2019-workload-visualstudioextension 
-
-#--- Visual Studio extensions ---
-choco install -y gitdiffmargin
-choco install -y resharper-ultimate-all --package-parameters="'/NoCpp'"
-
-#--- Get personal projects ---
-executeScript "PersonalProjects.ps1";
+# Install Java
+executeScript "JavaVersions.ps1";
 
 #--- Configure Windows environment .gitconfig, PowerShell ---
 executeScript "ConfigureWindowsEnvironment.ps1";

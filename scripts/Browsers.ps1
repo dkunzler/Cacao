@@ -1,2 +1,3 @@
 #--- Browsers ---
-choco install microsoft-edge-insider-dev
+choco install -y googlechrome
+choco install -y googlechrome.canary
