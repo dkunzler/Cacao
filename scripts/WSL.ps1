@@ -1,6 +1,6 @@
 choco install -y Microsoft-Windows-Subsystem-Linux --source="'windowsfeatures'"
 
-choco install -y wsl2
+choco install -y wsl2 --params "/Version:2 /Retry:true"
 choco install -y wsl-ubuntu-2004
 
 
