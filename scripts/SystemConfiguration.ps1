@@ -8,3 +8,6 @@ Set-ExecutionPolicy RemoteSigned
 
 #--- Enable administrative shares ---
 Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System -Name LocalAccountTokenFilterPolicy -Value 1
+
+# Windows 11: remove Chat from Taskbar
+Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name TaskbarMn -Value 0

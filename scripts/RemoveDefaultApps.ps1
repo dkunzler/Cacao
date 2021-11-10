@@ -19,6 +19,7 @@ $applicationList = @(
     "Microsoft.BingFinance"
     "Microsoft.3DBuilder"
     "Microsoft.BingNews"
+    "Microsoft.BingWeather"
     "Microsoft.BingSports"
     "Microsoft.CommsPhone"
     "Microsoft.Getstarted"
