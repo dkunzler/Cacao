@@ -22,3 +22,11 @@ Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Pe
 #Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name SystemUsesLightTheme -Value 0 -Type Dword -Force
 # System Light Mode
 Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name SystemUsesLightTheme -Value 1 -Type Dword -Force
+
+# add en-GB to Language List
+$OldList = Get-WinUserLanguageList
+$OldList.Add("en-GB")
+Set-WinUserLanguageList -LanguageList $OldList
+
+# user different input language per app window
+Set-WinLanguageBarOption -UseLegacySwitchMode
