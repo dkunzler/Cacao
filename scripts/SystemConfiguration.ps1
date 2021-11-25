@@ -12,6 +12,20 @@ Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\
 # Windows 11: remove Chat from Taskbar
 Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name TaskbarMn -Value 0
 
+# Removes Widgets from the Taskbar
+Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name TaskbarDa -Value 0
+
+# Removes search from the Taskbar
+reg.exe add "HKLM\Default\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v SearchboxTaskbarMode /t REG_DWORD /d 0 /f
+
+# Remove Microsoft Store from Taskbar (ger/eng only)
+$appname = "Microsoft Store"
+((New-Object -Com Shell.Application).NameSpace('shell:::{4234d49b-0245-4df3-b780-3893943456e1}').Items() | ?{$_.Name -eq $appname}).Verbs() | ?{$_.Name.replace('&','') -match 'Von Taskleiste lösen|Unpin from taskbar'} | %{$_.DoIt(); $exec = $true}
+
+# Remove Microsoft Edge from Taskbar (ger/eng only)
+$appname = "Microsoft Edge"
+((New-Object -Com Shell.Application).NameSpace('shell:::{4234d49b-0245-4df3-b780-3893943456e1}').Items() | ?{$_.Name -eq $appname}).Verbs() | ?{$_.Name.replace('&','') -match 'Von Taskleiste lösen|Unpin from taskbar'} | %{$_.DoIt(); $exec = $true}
+
 # Windows 11 Theming:
 
 # App Dark Mode:
