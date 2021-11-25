@@ -44,3 +44,7 @@ Set-WinUserLanguageList -LanguageList $OldList
 
 # user different input language per app window
 Set-WinLanguageBarOption -UseLegacySwitchMode
+
+# extend Path
+[Environment]::SetEnvironmentVariable("Path", $env:Path + ";c:\bin", "Machine")
+[Environment]::SetEnvironmentVariable("Path", $env:Path + ";c:\dev\bin", "Machine")
