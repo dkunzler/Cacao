@@ -9,4 +9,5 @@ choco install -y bitwarden
 choco install -y windirstat
 choco install -y virtualbox
 choco install -y google-drive-file-stream
+choco install -y openvpn-connect
 

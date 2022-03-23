@@ -1,8 +1,6 @@
 
 # tools we expect devs across many scenarios will want
 choco install -y git --package-parameters="'/GitOnlyOnPath  /WindowsTerminal'"
-choco install -y poshgit
-choco install -y oh-my-posh
 choco install -y jetbrainstoolbox
 choco install -y vscode
 choco install -y notepadplusplus
@@ -13,4 +11,3 @@ choco install -y sysinternals
 choco install -y ngrok
 choco install -y winscp
 
-Install-Module -Force oh-my-posh
