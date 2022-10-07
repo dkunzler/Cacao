@@ -48,3 +48,7 @@ Set-WinLanguageBarOption -UseLegacySwitchMode
 # extend Path
 [Environment]::SetEnvironmentVariable("Path", $env:Path + ";c:\bin", "Machine")
 [Environment]::SetEnvironmentVariable("Path", $env:Path + ";c:\dev\bin", "Machine")
+
+# enable hibernate
+powercfg /hibernate on
+powercfg /h /type full
