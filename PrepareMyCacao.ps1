@@ -29,6 +29,13 @@ executeScript "CommonDevTools.ps1";
 executeScript "Browsers.ps1";
 executeScript "WindowsTools.ps1";
 
+# Create PowerToys backup directory and copy settings file
+$powerToysBackupDir = "$HOME\Documents\PowerToys\Backup"
+if (-not (Test-Path -Path $powerToysBackupDir)) {
+    New-Item -Path $powerToysBackupDir -ItemType Directory -Force | Out-Null
+}
+Copy-Item -Path "files\powertoys\settings_133904335811162613.ptb" -Destination $powerToysBackupDir -Force
+
 RefreshEnv
 executeScript "WSL.ps1"; # TODO WSL2
 RefreshEnv

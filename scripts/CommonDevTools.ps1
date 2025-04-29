@@ -8,6 +8,5 @@ choco install -y nodejs
 choco install -y FiraCode
 choco install -y jetbrainsmono //see how to get the jetbrainsmono NF, Nerd Font version https://github.com/ryanoasis/nerd-fonts
 choco install -y sysinternals
-choco install -y ngrok
 choco install -y winscp
 
