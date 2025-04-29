@@ -12,4 +12,5 @@ choco install -y discord
 choco install -y google-drive-file-stream
 choco install -y obsidian
 choco install -y powertoys
+choco install -y pdf24
 
