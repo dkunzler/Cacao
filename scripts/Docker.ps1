@@ -1,3 +1,3 @@
 RefreshEnv
-choco install -y docker-desktop
+choco install -y podman-desktop
 choco install -y vscode-docker
