@@ -13,4 +13,5 @@ choco install -y google-drive-file-stream
 choco install -y obsidian
 choco install -y powertoys
 choco install -y pdf24
+choco install -y wingetui
 
