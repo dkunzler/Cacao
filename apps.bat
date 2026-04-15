@@ -58,6 +58,8 @@ echo   - PDF24
 winget install --id geeksoftwareGmbH.PDF24Creator -e --silent --accept-package-agreements --accept-source-agreements 2>>errors.log
 echo   - Paint.net
 winget install --id dotPDN.PaintDotNet -e --silent --accept-package-agreements --accept-source-agreements 2>>errors.log
+echo   - Soundswitch
+winget install --id AntoineAflalo.SoundSwitch -e --silent --accept-package-agreements --accept-source-agreements 2>>errors.log
 
 echo.
 
@@ -79,6 +81,8 @@ echo   - Claude Code
 powershell -Command "irm https://claude.ai/install.ps1 | iex"
 echo   - Claude Desktop
 winget install --id Anthropic.Claude -e --silent --accept-package-agreements --accept-source-agreements 2>>errors.log
+echo   - New PowerShell
+winget install --id Microsoft.PowerShell -e --silent --accept-package-agreements --accept-source-agreements 2>>errors.log
 echo.
 
 :: Security & Privacy
